@@ -1,7 +1,79 @@
-@use '../../style' as s;
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-main {
-	background: s.color(dark);
-	color: s.color(light);
-	padding: s.space(4);
-} 
+.page__content {
+	max-width: 720px;
+	padding: 24px;
+	box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.1);
+}
+
+.list__title {
+	color: rgba(33, 37, 41, 1);
+	font-size: 24px;
+	margin-bottom: 24px;
+}
+
+.input__block {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 24px;
+}
+
+.input {
+	border: 1px solid rgba(206, 212, 218, 1);
+	border-radius: 4px;
+	padding: 12px 16px;
+	width: 100%;
+}
+
+.button {
+	padding: 14px 24px;
+	background-color: rgba(13, 110, 253, 1);
+	color: white;
+	border-radius: 4px;
+	&:hover {
+		opacity: 0.7;
+		transition-duration: 0.7s;
+	}
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 0;
+	border-bottom: 1px solid rgba(211, 222, 233, 1);
+	&--done {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 12px 0;
+		color: rgba(211, 222, 233, 1);
+		text-decoration: line-through;
+		border-bottom: 1px solid rgba(211, 222, 233, 1);
+	}
+}
+
+.button__task {
+	&:hover {
+		opacity: 0.7;
+		transition-duration: 0.7s;
+	}
+	height: 28px;
+	width: 28px;
+
+	&--do {
+		background-image: url('/svg/to-do.svg');
+	}
+
+	&--cancel {
+		background-image: url('/svg/to-cancel.svg');
+	}
+
+	&--done {
+		background-image: url('/svg/to-done.svg');
+	}
+}
